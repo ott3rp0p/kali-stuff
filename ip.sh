@@ -1,9 +1,3 @@
-#!/bin/bash
-myip=$(ip addr | grep eth0 | grep inet | grep 192. | tr -s " " | cut -d " " -f 3 | cut -d "/" -f 1)
+ip=`ip a|grep eth0|awk -F/ '{printf $1}'|awk -Finet '{printf $2}'`
 
-if [[ $myip == *"192."* ]]
-then
-   echo "$myip"
-else
-   echo ""
-fi
+printf "IP: $ip  "
