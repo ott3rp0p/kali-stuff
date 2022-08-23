@@ -4,5 +4,5 @@ if [ ! -z "$ip" ]
         then 
         printf "VPN: $ip"
         else
-        printf ""
+        printf " XXX"
 fi
