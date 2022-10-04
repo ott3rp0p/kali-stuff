@@ -91,7 +91,7 @@ fi
 
 configure_prompt() {
     #case  
-        if [[ $(/home/ott3r/scripts/tun0.sh) == *"10"* ]]; then 
+        if [[ $(/home/ott3r/scripts/tun0.sh) == *"10"* || *"192"* ]]; then 
             PROMPT="%F{red}┌%f%F{red}[%f%F{cyan}%D{$(/home/ott3r/scripts/tun0.sh)}%f%F{red}]─[%B%F{%(#.red.green)}%n%(#.💀. 🦦🌊)%m%b%F{%(#.blue.red)}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼%f%F{green}[%f%F{yellow}🔪%f]%f%F{yellow}$%f" ;
         elif [[ $(/home/ott3r/scripts/pgvpn.sh) == *"192.168"* ]]; then
             PROMPT="%F{red}┌%f%F{red}[%f%F{cyan}%D{$(/home/ott3r/scripts/tun0.sh)}%f%F{red}]─[%B%F{%(#.red.green)}%n%(#.💀. 🦦🌊)%m%b%F{%(#.blue.red)}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼%f%F{green}[%f%F{yellow}🔪%f]%f%F{yellow}$%f" ;
